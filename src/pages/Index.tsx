@@ -25,8 +25,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-secondary/30">
-        <div className="max-w-4xl mx-auto text-center animate-fade-in">
+      <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-secondary/30 overflow-hidden">
+        <div className="absolute top-10 left-10 w-64 h-64 opacity-30">
+          <img src="https://cdn.poehali.dev/projects/1b0d0f7d-fb40-4bd4-938e-0e09f700a7f2/files/98b2e516-ab53-4c2e-bd73-8aee3b6cec09.jpg" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="absolute bottom-10 right-10 w-64 h-64 opacity-30 rotate-180">
+          <img src="https://cdn.poehali.dev/projects/1b0d0f7d-fb40-4bd4-938e-0e09f700a7f2/files/98b2e516-ab53-4c2e-bd73-8aee3b6cec09.jpg" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="max-w-4xl mx-auto text-center animate-fade-in relative z-10">
           <div className="mb-8">
             <Icon name="Heart" size={48} className="mx-auto text-primary" />
           </div>
@@ -44,8 +50,11 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 bg-white relative overflow-hidden">
+        <div className="absolute top-20 right-0 w-48 h-48 opacity-20">
+          <img src="https://cdn.poehali.dev/projects/1b0d0f7d-fb40-4bd4-938e-0e09f700a7f2/files/a732dc7a-c56c-496e-93fe-1e2826baf8d3.jpg" alt="" className="w-full h-full object-cover rounded-full" />
+        </div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <Icon name="Calendar" size={40} className="mx-auto text-primary mb-6" />
           <h2 className="text-5xl font-serif font-light mb-8 text-foreground">
             Дата и время
@@ -59,8 +68,11 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-secondary/20">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 bg-secondary/20 relative overflow-hidden">
+        <div className="absolute bottom-10 left-0 w-56 h-56 opacity-20">
+          <img src="https://cdn.poehali.dev/projects/1b0d0f7d-fb40-4bd4-938e-0e09f700a7f2/files/98b2e516-ab53-4c2e-bd73-8aee3b6cec09.jpg" alt="" className="w-full h-full object-contain" />
+        </div>
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <Icon name="MapPin" size={40} className="mx-auto text-primary mb-6" />
           <h2 className="text-5xl font-serif font-light mb-8 text-foreground">
             Место проведения
@@ -211,12 +223,22 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-12 px-4 bg-primary text-primary-foreground text-center">
-        <Icon name="Heart" size={32} className="mx-auto mb-4" />
-        <p className="text-lg font-serif">
-          С любовью, Анна и Дмитрий
-        </p>
-        <p className="text-sm mt-4 opacity-80">15 августа 2026</p>
+      <footer className="py-12 px-4 bg-primary text-primary-foreground text-center relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-1/4 w-32 h-32">
+            <Icon name="Flower" size={128} />
+          </div>
+          <div className="absolute bottom-0 right-1/4 w-32 h-32">
+            <Icon name="Flower2" size={128} />
+          </div>
+        </div>
+        <div className="relative z-10">
+          <Icon name="Heart" size={32} className="mx-auto mb-4" />
+          <p className="text-lg font-serif">
+            С любовью, Анна и Дмитрий
+          </p>
+          <p className="text-sm mt-4 opacity-80">15 августа 2026</p>
+        </div>
       </footer>
     </div>
   );
