@@ -14,7 +14,7 @@ const Index = () => {
     message: '',
   });
 
-  const weddingDate = new Date('2026-08-15T16:00:00');
+  const weddingDate = new Date('2026-07-29T16:00:00');
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -116,7 +116,7 @@ const Index = () => {
             Дата и время
           </h2>
           <div className="space-y-4">
-            <p className="text-3xl font-serif text-primary">15 августа 2026</p>
+            <p className="text-3xl font-serif text-primary">29 июля 2026</p>
             <p className="text-xl text-muted-foreground">Суббота</p>
             <p className="text-2xl text-foreground mt-6">16:00</p>
             <p className="text-lg text-muted-foreground">Церемония начнется ровно в 16:00</p>
@@ -184,7 +184,7 @@ const Index = () => {
             Подтверждение присутствия
           </h2>
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            Будем рады видеть вас на нашем празднике! Пожалуйста, подтвердите своё присутствие до 1 августа 2026
+            Будем рады видеть вас на нашем празднике! Пожалуйста, подтвердите своё присутствие до 15 июля 2026
           </p>
           <Card className="max-w-xl mx-auto">
             <CardContent className="p-8">
@@ -293,7 +293,7 @@ const Index = () => {
           <p className="text-lg font-serif">
             С любовью, Иван и Ксения
           </p>
-          <p className="text-sm mt-4 opacity-80">15 августа 2026</p>
+          <p className="text-sm mt-4 opacity-80">29 июля 2026</p>
         </div>
       </footer>
     </div>
