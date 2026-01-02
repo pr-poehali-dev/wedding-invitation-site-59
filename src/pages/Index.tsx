@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -13,6 +13,35 @@ const Index = () => {
     guests: '',
     message: '',
   });
+
+  const weddingDate = new Date('2026-08-15T16:00:00');
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const difference = weddingDate.getTime() - now.getTime();
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,10 +71,37 @@ const Index = () => {
           <p className="text-xl md:text-2xl text-muted-foreground font-light mb-8">
             Приглашаем вас разделить с нами радость нашего особенного дня
           </p>
-          <div className="flex items-center justify-center gap-4 text-primary">
+          <div className="flex items-center justify-center gap-4 text-primary mb-12">
             <div className="h-px w-20 bg-primary"></div>
             <Icon name="Flower2" size={24} />
             <div className="h-px w-20 bg-primary"></div>
+          </div>
+
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+              <div className="text-4xl md:text-5xl font-serif font-bold text-primary mb-2">
+                {timeLeft.days}
+              </div>
+              <div className="text-sm text-muted-foreground uppercase tracking-wider">Дней</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+              <div className="text-4xl md:text-5xl font-serif font-bold text-primary mb-2">
+                {timeLeft.hours}
+              </div>
+              <div className="text-sm text-muted-foreground uppercase tracking-wider">Часов</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+              <div className="text-4xl md:text-5xl font-serif font-bold text-primary mb-2">
+                {timeLeft.minutes}
+              </div>
+              <div className="text-sm text-muted-foreground uppercase tracking-wider">Минут</div>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
+              <div className="text-4xl md:text-5xl font-serif font-bold text-primary mb-2">
+                {timeLeft.seconds}
+              </div>
+              <div className="text-sm text-muted-foreground uppercase tracking-wider">Секунд</div>
+            </div>
           </div>
         </div>
       </section>
