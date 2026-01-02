@@ -26,10 +26,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20 bg-gradient-to-b from-white to-secondary/30 overflow-hidden">
-        <div className="absolute top-10 left-10 w-64 h-64 opacity-30">
+        <div className="absolute top-10 left-10 w-64 h-64 opacity-30 animate-float">
           <img src="https://cdn.poehali.dev/projects/1b0d0f7d-fb40-4bd4-938e-0e09f700a7f2/files/98b2e516-ab53-4c2e-bd73-8aee3b6cec09.jpg" alt="" className="w-full h-full object-contain" />
         </div>
-        <div className="absolute bottom-10 right-10 w-64 h-64 opacity-30 rotate-180">
+        <div className="absolute bottom-10 right-10 w-64 h-64 opacity-30 rotate-180 animate-float-reverse">
           <img src="https://cdn.poehali.dev/projects/1b0d0f7d-fb40-4bd4-938e-0e09f700a7f2/files/98b2e516-ab53-4c2e-bd73-8aee3b6cec09.jpg" alt="" className="w-full h-full object-contain" />
         </div>
         <div className="max-w-4xl mx-auto text-center animate-fade-in relative z-10">
@@ -51,7 +51,7 @@ const Index = () => {
       </section>
 
       <section className="py-20 px-4 bg-white relative overflow-hidden">
-        <div className="absolute top-20 right-0 w-48 h-48 opacity-20">
+        <div className="absolute top-20 right-0 w-48 h-48 opacity-20 animate-float">
           <img src="https://cdn.poehali.dev/projects/1b0d0f7d-fb40-4bd4-938e-0e09f700a7f2/files/a732dc7a-c56c-496e-93fe-1e2826baf8d3.jpg" alt="" className="w-full h-full object-cover rounded-full" />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -69,7 +69,7 @@ const Index = () => {
       </section>
 
       <section className="py-20 px-4 bg-secondary/20 relative overflow-hidden">
-        <div className="absolute bottom-10 left-0 w-56 h-56 opacity-20">
+        <div className="absolute bottom-10 left-0 w-56 h-56 opacity-20 animate-float-reverse">
           <img src="https://cdn.poehali.dev/projects/1b0d0f7d-fb40-4bd4-938e-0e09f700a7f2/files/98b2e516-ab53-4c2e-bd73-8aee3b6cec09.jpg" alt="" className="w-full h-full object-contain" />
         </div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
