@@ -66,7 +66,7 @@ const Index = () => {
             <Icon name="Heart" size={48} className="mx-auto text-primary" />
           </div>
           <h1 className="text-6xl md:text-8xl font-serif font-light mb-6 text-foreground">
-            Ксения & Иван
+            Иван & Ксения
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground font-light mb-8">
             Приглашаем вас разделить с нами радость нашего особенного дня
@@ -291,7 +291,7 @@ const Index = () => {
         <div className="relative z-10">
           <Icon name="Heart" size={32} className="mx-auto mb-4" />
           <p className="text-lg font-serif">
-            С любовью, Ксения и Иван
+            С любовью, Иван и Ксения
           </p>
           <p className="text-sm mt-4 opacity-80">15 августа 2026</p>
         </div>
