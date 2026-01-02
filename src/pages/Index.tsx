@@ -66,7 +66,7 @@ const Index = () => {
             <Icon name="Heart" size={48} className="mx-auto text-primary" />
           </div>
           <h1 className="text-6xl md:text-8xl font-serif font-light mb-6 text-foreground">
-            Анна & Дмитрий
+            Ксения & Иван
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground font-light mb-8">
             Приглашаем вас разделить с нами радость нашего особенного дня
@@ -258,7 +258,7 @@ const Index = () => {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-serif mb-4 text-foreground">Невеста</h3>
-                <p className="text-lg mb-2">Анна Петрова</p>
+                <p className="text-lg mb-2">Ксения Смирнова</p>
                 <a href="tel:+79001234567" className="text-primary hover:underline flex items-center justify-center gap-2">
                   <Icon name="Phone" size={16} />
                   +7 (900) 123-45-67
@@ -268,7 +268,7 @@ const Index = () => {
             <Card>
               <CardContent className="p-6">
                 <h3 className="text-xl font-serif mb-4 text-foreground">Жених</h3>
-                <p className="text-lg mb-2">Дмитрий Иванов</p>
+                <p className="text-lg mb-2">Иван Петров</p>
                 <a href="tel:+79007654321" className="text-primary hover:underline flex items-center justify-center gap-2">
                   <Icon name="Phone" size={16} />
                   +7 (900) 765-43-21
@@ -291,7 +291,7 @@ const Index = () => {
         <div className="relative z-10">
           <Icon name="Heart" size={32} className="mx-auto mb-4" />
           <p className="text-lg font-serif">
-            С любовью, Анна и Дмитрий
+            С любовью, Ксения и Иван
           </p>
           <p className="text-sm mt-4 opacity-80">15 августа 2026</p>
         </div>
