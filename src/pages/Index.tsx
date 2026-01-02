@@ -160,10 +160,7 @@ const Index = () => {
           <div className="max-w-2xl mx-auto space-y-8">
             {[
               { time: '16:00', title: 'Церемония', desc: 'Торжественная регистрация брака' },
-              { time: '17:00', title: 'Коктейль', desc: 'Фуршет и фотосессия' },
               { time: '18:00', title: 'Банкет', desc: 'Праздничный ужин' },
-              { time: '20:00', title: 'Первый танец', desc: 'Танцевальная программа' },
-              { time: '22:00', title: 'Торт и фейерверк', desc: 'Сладкий стол и салют' },
             ].map((item, idx) => (
               <div key={idx} className="flex gap-6 items-start text-left p-6 rounded-lg hover:bg-secondary/20 transition-colors">
                 <div className="text-2xl font-serif text-primary min-w-[80px]">{item.time}</div>
